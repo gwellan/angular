@@ -1,17 +1,9 @@
 <label>Server name</label>
-<p>This input does not use two-way binding :</p>
-<input
-  type="text"
-  class="form-control"
-  (input)="onUpdateServerName($event)"
->
-<p>This input uses two-way binding :</p>
 <input
   type="text"
   class="form-control"
   [(ngModel)]="serverName"
 >
-<p>{{ serverName }}</p>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
