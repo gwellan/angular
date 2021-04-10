@@ -1,6 +1,8 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
-<p>Two ways to bind data. String interpolation should be use to display text. Property binding is best for working on the DOM.</p>
-<p>{{ allowNewServer }}</p>
-<p [innerText]="allowNewServer"></p>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>Add server</button>
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
